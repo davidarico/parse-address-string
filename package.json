@@ -1,5 +1,5 @@
 {
-	"name": "parse-address-string",
+	"name": "@delightfulstudio/parse-address-string",
 	"version": "0.0.3",
 	"description": "Extract street, city, state, zip, and country components from single-line address string",
 	"keywords": [
@@ -9,17 +9,22 @@
 		"street",
 		"geo",
 		"us",
-		"canada"
+		"canada",
+		"react native"
 	],
-	"author": "fluffybunnies",
+	"contributors": [
+      {
+        "name": "Delightful Studio",
+        "email": "hello@delightful.studio"
+      },
+      {
+        "name": "Alec Hulce"
+      }
+    ],
 	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:fluffybunnies/parse-address-string.git"
-	},
-	"homepage": "https://github.com/fluffybunnies/parse-address-string",
+	"repository": "github:DelightfulStudio/parse-address-string",
 	"bugs": {
-		"url": "https://github.com/fluffybunnies/parse-address-string/issues"
+		"url": "https://github.com/DelightfulStudio/parse-address-string/issues"
 	},
 	"main": "index.js",
 	"scripts": {

@@ -217,10 +217,9 @@ test('explodeAddress',function(t){
 	t.plan(tests.length)
 
 	tests.forEach(function(test){
-		app(test.input,function(err,addressObj){
-			if (JSON.stringify(addressObj) != JSON.stringify(test.expected)) console.log(test.desc,'addressObj != test.expected',addressObj,'!=',JSON.stringify(test.expected))
-			t.ok(JSON.stringify(addressObj) == JSON.stringify(test.expected), test.desc)
-		})
+		const addressObj = app(test.input)
+		if (JSON.stringify(addressObj) != JSON.stringify(test.expected)) console.log(test.desc,'addressObj != test.expected',addressObj,'!=',JSON.stringify(test.expected))
+		t.ok(JSON.stringify(addressObj) == JSON.stringify(test.expected), test.desc)
 	})
 })
 
@@ -272,9 +271,7 @@ test('implodeAddress',function(t){
 	t.plan(tests.length)
 
 	tests.forEach(function(test){
-		app.implodeAddress(test.input,function(err,addressStr){
-			t.ok(addressStr == test.expected, test.desc)
-		})
+		const addressStr = app.implodeAddress(test.input)
+		t.ok(addressStr == test.expected, test.desc)
 	})
 })
-
