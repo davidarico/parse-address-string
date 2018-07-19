@@ -3,6 +3,29 @@ module.exports = explodeAddress
 module.exports.explodeAddress = explodeAddress
 module.exports.implodeAddress = implodeAddress
 
+const stateMap = require('./lib/states.json')
+const countryMap = require('./lib/countries.json')
+
+
+function normalize({ state, country, ...addressObj }) {
+	// normalize state and country, if any
+	if ( state ) {
+		const normalizedState = stateMap[state.toLowerCase()]
+		state = normalizedState || state
+	}
+
+	if ( country ) {
+		const normalizedCountry = countryMap[country.toLowerCase()]
+		country = normalizedCountry || country
+	}
+
+	return {
+		...addressObj,
+		state,
+		country
+	}
+}
+
 
 function explodeAddress(singleLineAddress){
 	var addressObj = {
@@ -47,7 +70,7 @@ function explodeAddress(singleLineAddress){
 		addressObj.street_address1 = addySplit[0].trim()
 		addressObj.city = addySplit[1].trim()
 		addressObj.state = addySplit[2].trim()
-		return addressObj
+		return normalize(addressObj)
 	}
 
 	// Handle generic case...
@@ -69,7 +92,7 @@ function explodeAddress(singleLineAddress){
 		!addressObj.city && (addressObj.city = addyPart)
 	})
 
-	return addressObj
+	return normalize(addressObj)
 }
 
 function implodeAddress(addressObj){
@@ -103,12 +126,11 @@ function implodeAddress(addressObj){
 var states
 function looksLikeState(str){
 	if (!states) {
-		var map = require('./lib/states.json')
 		states = {}
-		for (var k in map) {
-			if (map.hasOwnProperty(k)){
+		for (var k in stateMap) {
+			if (stateMap.hasOwnProperty(k)){
 				states[k.toLowerCase()] = true
-				states[map[k].toLowerCase()] = true
+				states[stateMap[k].toLowerCase()] = true
 			}
 		}
 	}
@@ -119,18 +141,14 @@ function looksLikeState(str){
 var countries
 function looksLikeCountry(str){
 	if (!countries) {
-		var map = require('./lib/countries.json')
 		countries = {}
-		for (var k in map) {
-			if (map.hasOwnProperty(k)){
+		for (var k in countryMap) {
+			if (countryMap.hasOwnProperty(k)){
 				countries[k.toLowerCase()] = true
-				countries[map[k].toLowerCase()] = true
+				countries[countryMap[k].toLowerCase()] = true
 			}
 		}
 	}
 	str = str.trim().toLowerCase()
-	if (str == 'usa') {
-		return true
-	}
 	return !!countries[str]
 }

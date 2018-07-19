@@ -9,8 +9,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '1842 W Washington Blvd'
 				,city: 'Los Angeles'
-				,state: 'CA'
 				,postal_code: '90007'
+				,state: 'CA'
 				,country: null
 			}
 		}
@@ -20,8 +20,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '90007 W Washington Blvd'
 				,city: 'Santa Monica'
-				,state: 'California'
 				,postal_code: '90007'
+				,state: 'CA'
 				,country: null
 			}
 		}
@@ -31,8 +31,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: 'Trousdale Parkway'
 				,city: 'Los Angeles'
-				,state: 'California'
 				,postal_code: null
+				,state: 'CA'
 				,country: null
 			}
 		}
@@ -42,8 +42,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '1201 Broadway'
 				,city: 'New York'
-				,state: 'New York'
 				,postal_code: '10001'
+				,state: 'NY'
 				,country: null
 			}
 		}
@@ -53,8 +53,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '306 Deep Creek Rd'
 				,city: 'Fayetteville'
-				,state: 'North Carolina'
 				,postal_code: '28312'
+				,state: 'NC'
 				,country: null
 			}
 		}
@@ -64,8 +64,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '1842 W Washington Blvd'
 				,city: 'Los Angeles'
-				,state: 'CA'
 				,postal_code: '90007'
+				,state: 'CA'
 				,country: 'US'
 			}
 		}
@@ -75,9 +75,9 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '1842 W Washington Blvd'
 				,city: 'Los Angeles'
-				,state: 'CA'
 				,postal_code: '90007'
-				,country: 'USA'
+				,state: 'CA'
+				,country: 'US'
 			}
 		}
 		,{
@@ -86,8 +86,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '646 Union Ave E'
 				,city: 'Winnipeg'
-				,state: 'MB'
 				,postal_code: 'R2L 1A4'
+				,state: 'MB'
 				,country: 'CA'
 			}
 		}
@@ -97,8 +97,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '229 Begin St W'
 				,city: 'Thunder Bay'
-				,state: 'ON'
 				,postal_code: 'P7E 5M5'
+				,state: 'ON'
 				,country: null
 			}
 		}
@@ -108,8 +108,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '3300-3332 Glen Koester Ln'
 				,city: 'Idaho Falls'
-				,state: 'ID'
 				,postal_code: null
+				,state: 'ID'
 				,country: null
 			}
 		}
@@ -119,8 +119,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '757 Juntura-Riverside Rd'
 				,city: 'Riverside'
-				,state: null
 				,postal_code: null
+				,state: null
 				,country: null
 			}
 		}
@@ -130,8 +130,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '1813 Linda Vista Cir'
 				,city: null
-				,state: null
 				,postal_code: '92831'
+				,state: null
 				,country: null
 			}
 		}
@@ -141,8 +141,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: '145 Parkway Ave'
 				,city:  null
-				,state: null
 				,postal_code: null
+				,state: null
 				,country: null
 			}
 		}
@@ -152,8 +152,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: null
 				,city:  'Los Angeles'
-				,state: null
 				,postal_code: null
+				,state: null
 				,country: null
 			}
 		}
@@ -163,8 +163,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: null
 				,city:  null
-				,state: 'NJ'
 				,postal_code: null
+				,state: 'NJ'
 				,country: null
 			}
 		}
@@ -174,8 +174,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: null
 				,city:  null
-				,state: null
 				,postal_code: '13820'
+				,state: null
 				,country: null
 			}
 		}
@@ -185,9 +185,9 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: null
 				,city:  null
-				,state: null
 				,postal_code: null
-				,country: 'United States'
+				,state: null
+				,country: 'US'
 			}
 		}
 		,{
@@ -196,8 +196,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: null
 				,city:  null
-				,state: null
 				,postal_code: null
+				,state: null
 				,country: null
 			}
 		}
