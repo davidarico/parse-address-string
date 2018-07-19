@@ -1,6 +1,6 @@
 {
 	"name": "@delightfulstudio/parse-address-string",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Extract street, city, state, zip, and country components from single-line address string",
 	"keywords": [
 		"address",

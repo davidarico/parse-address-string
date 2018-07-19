@@ -2,6 +2,7 @@
 module.exports = explodeAddress
 module.exports.explodeAddress = explodeAddress
 module.exports.implodeAddress = implodeAddress
+module.exports.normalize = normalize
 
 const stateMap = require('./lib/states.json')
 const countryMap = require('./lib/countries.json')
@@ -70,7 +71,7 @@ function explodeAddress(singleLineAddress){
 		addressObj.street_address1 = addySplit[0].trim()
 		addressObj.city = addySplit[1].trim()
 		addressObj.state = addySplit[2].trim()
-		return normalize(addressObj)
+		return addressObj
 	}
 
 	// Handle generic case...
@@ -92,7 +93,7 @@ function explodeAddress(singleLineAddress){
 		!addressObj.city && (addressObj.city = addyPart)
 	})
 
-	return normalize(addressObj)
+	return addressObj
 }
 
 function implodeAddress(addressObj){

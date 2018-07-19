@@ -1,5 +1,5 @@
 var test = require('tape')
-,app = require('../')
+, app = require('../')
 
 test('explodeAddress',function(t){
 	var tests = [
@@ -207,8 +207,8 @@ test('explodeAddress',function(t){
 			,expected: {
 				street_address1: null
 				,city:  null
-				,state: null
 				,postal_code: null
+				,state: null
 				,country: null
 			}
 		}
@@ -217,7 +217,7 @@ test('explodeAddress',function(t){
 	t.plan(tests.length)
 
 	tests.forEach(function(test){
-		const addressObj = app(test.input)
+		const addressObj = app.normalize(app(test.input))
 		if (JSON.stringify(addressObj) != JSON.stringify(test.expected)) console.log(test.desc,'addressObj != test.expected',addressObj,'!=',JSON.stringify(test.expected))
 		t.ok(JSON.stringify(addressObj) == JSON.stringify(test.expected), test.desc)
 	})

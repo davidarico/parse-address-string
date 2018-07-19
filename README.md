@@ -3,7 +3,7 @@ Extracts street, city, state, zip, and country components from single-line addre
 
 Major changes:
  - Remove `process.nextTick` dependency/replace callbacks with regular returns (React Native compatibility)
- - Normalize state and country, if any, to use the abbreviated form (CA, US, etc.)
+ - `normalize` function; normalizes state and country, if any, to use the abbreviated form (CA, US, etc.)
 
 ## Example
 ```javascript
