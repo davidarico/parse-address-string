@@ -1,4 +1,6 @@
 # Fork of [parse-address-string](https://github.com/fluffybunnies/parse-address-string)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDelightfulStudio%2Fparse-address-string.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDelightfulStudio%2Fparse-address-string?ref=badge_shield)
+
 Extracts street, city, state, zip, and country components from single-line address string
 
 Major changes:
@@ -16,3 +18,7 @@ console.log('State: ', addressObj.state)
 console.log('Zip: ', addressObj.postal_code)
 console.log('Country: ', addressObj.country)
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDelightfulStudio%2Fparse-address-string.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDelightfulStudio%2Fparse-address-string?ref=badge_large)
