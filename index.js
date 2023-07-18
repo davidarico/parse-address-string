@@ -73,6 +73,15 @@ function explodeAddress(singleLineAddress){
 		addressObj.state = addySplit[2].trim()
 		return addressObj
 	}
+	else if (addySplit.length == 2) { // handle case of "City, State Country"
+		const stateCountry = addySplit[1].trim().split(' ').map(x => x.trim())
+		if (stateCountry.length == 2 && looksLikeState(stateCountry[0]) && looksLikeCountry(stateCountry[1])) {
+			addressObj.city = addySplit[0].trim()
+			addressObj.state = stateCountry[0].trim()
+			addressObj.country = stateCountry[1].trim()
+			return addressObj
+		}
+	}
 
 	// Handle generic case...
 	addySplit.forEach(function(addyPart){

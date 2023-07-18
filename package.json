@@ -1,6 +1,6 @@
 {
-	"name": "@delightfulstudio/parse-address-string",
-	"version": "0.0.6",
+	"name": "@davidarico/parse-address-string",
+	"version": "0.0.7",
 	"description": "Extract street, city, state, zip, and country components from single-line address string",
 	"keywords": [
 		"address",
@@ -13,6 +13,10 @@
 		"react native"
 	],
 	"contributors": [
+	  {
+		"name": "David Arico",
+		"email": "davidarico87@gmail.com"
+	  },
       {
         "name": "Delightful Studio",
         "email": "hello@delightful.studio"
@@ -22,9 +26,9 @@
       }
     ],
 	"license": "MIT",
-	"repository": "github:DelightfulStudio/parse-address-string",
+	"repository": "github:davidarico/parse-address-string",
 	"bugs": {
-		"url": "https://github.com/DelightfulStudio/parse-address-string/issues"
+		"url": "https://github.com/davidarico/parse-address-string/issues"
 	},
 	"main": "index.js",
 	"scripts": {

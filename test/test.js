@@ -211,6 +211,17 @@ test('explodeAddress',function(t){
 				,state: null
 				,country: null
 			}
+		},
+		{
+			desc: 'city, state country'
+			,input: 'Columbus, TX US'
+			,expected: {
+				street_address1: null,
+				city: 'Columbus',
+				postal_code: null,
+				state: 'TX',
+				country: 'US'
+			}
 		}
 	]
 
